@@ -10,6 +10,10 @@ const schema = new mongoose.Schema({
   address: String,
   phone: String,
   status: String,
+  deleted: {
+    type: Boolean,
+    default: false
+  },
   deletedBy: String,
   deletedAt: Date,
   createdBy: String,

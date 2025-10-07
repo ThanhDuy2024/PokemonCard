@@ -1,8 +1,9 @@
 import { Router } from "express";
 import * as adminAccountController from "../../controllers/admin/adminAccount.controller";
+import * as validate from "../../validates/accountValidate"
 const route = Router();
 
-route.post("/register", adminAccountController.register);
+route.post("/register", validate.register, adminAccountController.register);
 
 route.get("/create", adminAccountController.createAdminAccount);
 
